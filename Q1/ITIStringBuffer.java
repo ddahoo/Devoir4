@@ -6,22 +6,20 @@ public class ITIStringBuffer {
     }
 
     public ITIStringBuffer(String  firstString){
-        if(buffer != null)
-        {
-            buffer.addFirst(firstString);
-        }
-        else
-        {
-            
-        }
+        buffer = new SinglyLinkedList<String>();
+        buffer.addFirst(firstString);
     }
 
     public void append(String nextString){
-        throw new UnsupportedOperationException( "replace with your implementation" );
+        buffer.add(nextString);
     }
 
     public String toString(){
-        throw new UnsupportedOperationException( "replace with your implementation" );
+        Iterator itr = buffer.iterator();
+        while (itr.hasNext())
+        {
+          System.out.print(itr.next());
+        }
     }
 
 }

@@ -1,12 +1,12 @@
+import java.util.*;
+
 public class ITIStringBuffer {
-    private SinglyLinkedList<String> buffer;
+    private static final SinglyLinkedList<String> buffer = new SinglyLinkedList<String>();
 
     public ITIStringBuffer() {
-        buffer = new SinglyLinkedList<String>();
     }
 
-    public ITIStringBuffer(String  firstString){
-        buffer = new SinglyLinkedList<String>();
+    public ITIStringBuffer(String firstString){
         buffer.addFirst(firstString);
     }
 
@@ -15,11 +15,13 @@ public class ITIStringBuffer {
     }
 
     public String toString(){
-        Iterator itr = buffer.iterator();
+        Iterator<String> itr = buffer.iterator();
+        String result = new String();
         while (itr.hasNext())
         {
-          System.out.print(itr.next());
+          result.concat((String)itr.next());
         }
+        return result;
     }
 
 }

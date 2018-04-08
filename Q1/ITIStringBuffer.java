@@ -2,6 +2,7 @@ import java.util.*;
 
 /*
 * String buffer implemented using a singly linked list.
+* @author Daryl Dahoo & Gabriel Fournier.
 */
 public class ITIStringBuffer {
     /*

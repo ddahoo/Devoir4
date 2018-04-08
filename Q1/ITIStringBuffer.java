@@ -15,12 +15,7 @@ public class ITIStringBuffer {
     }
 
     public String toString(){
-        Iterator<String> itr = buffer.iterator();
-        String result = new String();
-        while (itr.hasNext())
-        {
-          result.concat((String)itr.next());
-        }
+        String result = String.join("", buffer);
         return result;
     }
 
